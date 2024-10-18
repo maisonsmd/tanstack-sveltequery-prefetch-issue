@@ -7,6 +7,8 @@ export const getPosts = async (limit: number) => {
 }
 
 export const getPostById = async (id: number): Promise<Post> => {
+  console.log('Call API', id)
+
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${id}`,
   )
